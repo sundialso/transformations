@@ -17,7 +17,7 @@ WITH temp_data AS (
         plan AS plan_duration -- Collect segments here. Segments or properties can change
         -- over time like their plans etc.
     FROM
-        `your-event-table` -- Merge the previous days data into dim_user.
+        `your-payment-events-table` -- Merge the previous days data into dim_user.
         -- We do this the next day to avoid cyclic dependency on dim_user.
         -- We want to query the dim_user based on its previous day's state
         -- to check for resurrected users.
